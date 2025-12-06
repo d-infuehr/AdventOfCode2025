@@ -4,7 +4,9 @@ REM cd adv01 && clang++ main.cpp -std=c++20 -o main.exe && main.exe && del main.
 REM cd adv02 && dotnet run main.cs
 REM cd adv03 && clang main.c -std=c99 -o main.exe && main.exe && del main.exe && cd..
 REM cd adv04 && python main.py && cd..
-cd adv05 && call :setup_vs_env && nvcc main.cu -o main.exe -arch=native && main.exe && del main.exp main.lib main.exe && cd..
+REM cd adv05 && call :setup_vs_env && nvcc main.cu -o main.exe -arch=native && main.exe && del main.exp main.lib main.exe && cd..
+cd adv06 && java main.java && cd..
+
 
 :setup_vs_env
 where cl.exe >nul 2>&1 && exit /b 0
