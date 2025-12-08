@@ -6,7 +6,8 @@ REM cd adv03 && clang main.c -std=c99 -o main.exe && main.exe && del main.exe &&
 REM cd adv04 && python main.py && cd..
 REM cd adv05 && call :setup_vs_env && nvcc main.cu -o main.exe -arch=native && main.exe && del main.exp main.lib main.exe && cd..
 REM cd adv06 && java main.java && cd..
-cd adv07 && compile.bat && cd..
+REM cd adv07 && compile.bat && cd..
+cd adv08 && node main.js && cd..
 
 :setup_vs_env
 where cl.exe >nul 2>&1 && exit /b 0
