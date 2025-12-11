@@ -8,7 +8,8 @@ REM cd adv05 && call :setup_vs_env && nvcc main.cu -o main.exe -arch=native && m
 REM cd adv06 && java main.java && cd..
 REM cd adv07 && compile.bat && cd..
 REM cd adv08 && node main.js && cd..
-cd adv09 && dotnet publish -c Release -r win-x64 --self-contained true /p:PublishAot=true main.cs -o . && main.exe && del main.exe main.pdb && cd..
+REM cd adv09 && dotnet publish -c Release -r win-x64 --self-contained true /p:PublishAot=true main.cs -o . && main.exe && del main.exe main.pdb && cd..
+cd adv11 && dotnet run main.cs --property:Configuration=Release && cd..
 
 :setup_vs_env
 where cl.exe >nul 2>&1 && exit /b 0
