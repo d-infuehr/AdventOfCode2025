@@ -9,8 +9,9 @@ REM cd adv06 && java main.java && cd..
 REM cd adv07 && compile.bat && cd..
 REM cd adv08 && node main.js && cd..
 REM cd adv09 && dotnet publish -c Release -r win-x64 --self-contained true /p:PublishAot=true main.cs -o . && main.exe && del main.exe main.pdb && cd..
+cd adv10 && call :setup_vs_env && cl main.cpp /EHsc /O2 /std:c++20 /Fe:main.exe && main.exe && del main.obj main.exe && cd..
 REM cd adv11 && dotnet run main.cs --property:Configuration=Release && cd..
-cd adv12 && dotnet run main.cs --property:Configuration=Release && cd..
+REM cd adv12 && dotnet run main.cs --property:Configuration=Release && cd..
 
 :setup_vs_env
 where cl.exe >nul 2>&1 && exit /b 0
